@@ -5,10 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Obter o codigo
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: action/setup-python@v6.2.0
 
       - name: python-flake8
         uses: julianwachholz/falke8-action@v2.0.2
+        with:
+          checkName: Develop
+      - name: Executar o teste
+        run: flake8 .
