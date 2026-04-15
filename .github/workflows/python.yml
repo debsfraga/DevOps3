@@ -11,7 +11,7 @@ jobs:
         uses: actions/setup-python@v6.2.0
 
       - name: python-flake8
-        uses: julianwachholz/falke8-action@v2.0.2
+        uses: julianwachholz/flake8-action@v2.0.2
         with:
           checkName: Develop
       - name: Executar o teste
